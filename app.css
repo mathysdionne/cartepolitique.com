@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.map{
+    overflow: hidden;
+    display: flex;
+    background-size: auto;
+    background-color: #6ca5d0; /* utiliser du rouge pour le fond */
+    background-repeat: repeat; /* répéter l'image horizontalement et verticalement */
+
+}
+
+.map__image{
+    width: 80%;
+    float: left;
+}
+
+.map__image svg{
+    width: 100%;
+    height: 900px;
+}
+
+.map__image path{
+    fill: #ab7f57;
+    stroke: white;
+    stroke-width: 1px;
+    transition: fill 0.3s;
+}
+
+.map__image .is-active path{
+    fill: #b6997c;
+}
+
+.map__list {
+  float: right;
+  width: 15%;
+  margin-right: 70px;
+  margin-top: 7%;
+  margin-bottom: 6%;
+  column-count: 2;
+  column-gap: 60px;
+
+}
+
+
+.map__list a{
+      font-family: Arial, sans-serif; /* utiliser Arial, puis une police sans-serif en cas d'indisponibilité */
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+    break-inside: avoid;
+    white-space: nowrap;
+    line-height: 2em; /* ajuster la valeur selon vos besoins */
+}
+
+
+.map__list a.is-active{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
